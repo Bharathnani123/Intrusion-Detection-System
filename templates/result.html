@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Prediction Result</title>
+  <style>
+    html, body {
+      font-family: 'Segoe UI', sans-serif;
+      background-image: url('/static/PIK.jpg'); /* Use your image name */
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .result-box {
+      background-color:  rgba(91, 85, 85, 0.7);
+      padding: 40px;
+      border-radius: 12px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+      text-align: center;
+      width: 400px;
+    }
+
+    h2 {
+      font-size: 30px;
+    }
+
+    .normal {
+      color: rgb(183, 0, 0);
+    }
+
+    .attack {
+      color: red;
+    }
+
+    .btn {
+      margin-top: 30px;
+      text-decoration: none;
+      background-color: #121212;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 6px;
+      display: inline-block;
+    }
+
+    .btn:hover {
+      background-color: #424343;
+    }
+  </style>
+</head>
+<body>
+  <div class="result-box">
+    {% if result_type == 'Normal' %}
+      <h2 class="normal">Traffic is {{ result_type }}</h2>
+    {% else %}
+      <h2 class="attack">{{ result_type }} Detected: {{ attack_type }}</h2>
+    {% endif %}
+    <a href="/" class="btn">Try Another</a>
+  </div>
+</body>
+</html>

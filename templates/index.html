@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Intrusion Detection System</title>
+  <style>
+    html, body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background-image: url('/static/PIK.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      color: #ffffff;
+    }
+
+    .container {
+      max-width: 600px;
+      margin: 100px auto;
+      padding: 30px;
+      background: rgba(91, 85, 85, 0.7); /* Semi-transparent overlay */
+      border-radius: 15px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+    }
+
+    h2 {
+      text-align: center;
+      color: white(0, 0%, 100%, 0.648);
+    }
+
+    label {
+      display: block;
+      margin-top: 15px;
+    }
+
+    input, select {
+      width: 100%;
+      padding: 8px;
+      border-radius: 5px;
+      border: none;
+      margin-top: 5px;
+    }
+
+    input[type="submit"] {
+      background-color: #444343;
+      color: white;
+      font-size: 16px;
+      padding: 10px;
+      margin-top: 20px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #888888;
+    }
+
+    .assist-link {
+      display: block;
+      margin-top: 20px;
+      text-align: center;
+      color: #feffff;
+      text-decoration: none;
+    }
+
+    .assist-link:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Intrusion Detection System</h2>
+    <form action="/predict" method="post">
+      <label>Duration:</label>
+      <input type="number" name="duration" required>
+
+      <label>Protocol Type:</label>
+      <select name="protocol_type">
+        <option value="tcp">tcp</option>
+        <option value="udp">udp</option>
+        <option value="icmp">icmp</option>
+      </select>
+
+      <label>Service:</label>
+      <select name="service">
+        <option value="http">http</option>
+        <option value="ftp">ftp</option>
+        <option value="smtp">smtp</option>
+        <option value="domain_u">domain_u</option>
+        <option value="other">other</option>
+      </select>
+
+      <label>Flag:</label>
+      <select name="flag">
+        <option value="SF">SF</option>
+        <option value="S0">S0</option>
+        <option value="REJ">REJ</option>
+        <option value="RSTO">RSTO</option>
+      </select>
+
+      <label>Source Bytes:</label>
+      <input type="number" name="src_bytes" required>
+
+      <label>Destination Bytes:</label>
+      <input type="number" name="dst_bytes" required>
+
+      <label>Connection Count:</label>
+      <input type="number" name="count" required>
+
+      <label>Service Count:</label>
+      <input type="number" name="srv_count" required>
+
+      <input type="submit" value="Predict">
+    </form>
+
+    <a class="assist-link" href="/assist">Need Help? Visit Assist Page</a>
+  </div>
+</body>
+</html>

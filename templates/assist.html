@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Assist | IDS Information</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #747474;
+      padding: 20px;
+      color: #333;
+    }
+
+    h1, h2 {
+      color: #0b0b0b;
+    }
+
+    section {
+      margin-bottom: 30px;
+    }
+
+    ul {
+      list-style-type: square;
+      padding-left: 20px;
+    }
+
+    .card {
+      background-color: rgb(199, 198, 198);
+      padding: 20px;
+      border-radius: 10px;
+      margin-bottom: 20px;
+      box-shadow: 0 4px 8px rgba(81, 80, 80, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      cursor: pointer;
+    }
+
+    .card:hover {
+      transform: scale(1.03);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+    }
+
+    .back-btn {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 8px 14px;
+      background-color: #3f3f3f;
+      color: white;
+      text-decoration: none;
+      border-radius: 6px;
+      transition: background 0.3s;
+    }
+
+    .back-btn:hover {
+      background-color: #2b2b2b;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Assist - Understanding the Intrusion Detection System</h1>
+
+  <section class="card">
+    <h2>Importance of This Website</h2>
+    <p>This Intrusion Detection System (IDS) helps to detect malicious activities in a network by analyzing traffic data and identifying threats. With machine learning, it improves accuracy in real-time threat detection, reducing manual monitoring and enhancing cybersecurity.</p>
+  </section>
+
+  <section class="card">
+    <h2>Feature (Column) Descriptions from KDD Dataset</h2>
+    <ul>
+      <li><b>duration:</b> length (in seconds) of the connection</li>
+      <li><b>protocol_type:</b> type of protocol (e.g., TCP, UDP)</li>
+      <li><b>service:</b> network service used (e.g., HTTP, FTP)</li>
+      <li><b>flag:</b> status of the connection</li>
+      <li><b>src_bytes:</b> bytes sent from source to destination</li>
+      <li><b>dst_bytes:</b> bytes sent from destination to source</li>
+      <li><b>count:</b> number of connections to the same host in past 2 seconds</li>
+      <li><b>srv_count:</b> number of connections to the same service in past 2 seconds</li>
+    </ul>
+  </section>
+
+  <section class="card">
+    <h2>Common Attack Types</h2>
+    <ul>
+      <li><b>neptune:</b> DoS attack using SYN flooding</li>
+      <li><b>smurf:</b> ICMP-based broadcast flooding (DoS)</li>
+      <li><b>satan:</b> Probing for vulnerabilities in services</li>
+      <li><b>ipsweep:</b> Scanning multiple IPs to find active hosts</li>
+      <li><b>nmap:</b> Port scanning to discover open services</li>
+      <li><b>portsweep:</b> Scanning multiple ports on a single host</li>
+      <li><b>back:</b> DoS attack using backdoor communication</li>
+      <li><b>teardrop:</b> Malformed packet fragmentation (DoS)</li>
+      <li><b>warezclient:</b> Unauthorized access to upload/download files</li>
+      <li><b>guess_passwd:</b> Repeated login attempts to guess passwords</li>
+    </ul>
+  </section>
+
+  <a href="/" class="back-btn">⬅ Back to Home</a>
+
+</body>
+</html>
